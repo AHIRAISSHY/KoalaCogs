@@ -20,9 +20,8 @@ class Pensive(commands.Cog):
     async def silentsay(self, ctx, *, msg: str):
         """
            Makes the Bot repeat things silently
-
-           Credit: TrustyJAID
         """
+        # https://github.com/TrustyJAID/Trusty-cogs/blob/master/trustybot/trustybot.py#L56
         if ctx.channel.permissions_for(ctx.guild).manage_messages:
             await ctx.message.delete()
         await ctx.send(msg)
