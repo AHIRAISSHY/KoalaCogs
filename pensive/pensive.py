@@ -2,7 +2,7 @@ import discord
 from redbot.core import commands
 
 
-class PensiveCowBoy(commands.Cog):
+class Pensive(commands.Cog):
     """My First Cog"""
 
     @commands.command()
