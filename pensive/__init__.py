@@ -1,5 +1,6 @@
-from .pensive import pensive
+from .pensive import Pensive
 
 
 def setup(bot):
-    bot.add_cog(pensive())
+    cog = Pensive(bot)
+    bot.add_cog(cog)
