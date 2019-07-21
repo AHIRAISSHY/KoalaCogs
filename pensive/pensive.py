@@ -11,7 +11,7 @@ class Pensive(commands.Cog):
         """Support Server"""
         await ctx.send("https://discord.gg/xGEMMmy")
 
-    @commands.command(hidden=True)
+    @commands.command()
     async def say(self, ctx, *, msg: str):
         """Make the bot repeat things"""
         await ctx.send(msg)
