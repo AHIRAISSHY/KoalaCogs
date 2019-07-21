@@ -42,7 +42,7 @@ class Pensive(commands.Cog):
             if hook.name == guild.me.name:
                 webhook = hook
         if webhook is None:
-            webhook = await ctx.channel.create_wbhook(name=guild.me.name)
+            webhook = await ctx.channel.create_webhook(name=guild.me.name)
         avatar = member.avatar_url_as(format="png")
         msg = msg.replace("@everyone", "everyone").replace("@here", "here")
         for mention in ctx.message.mentions:
