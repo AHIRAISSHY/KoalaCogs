@@ -5,8 +5,6 @@ from typing import Optional
 
 class Pensive(commands.Cog):
     """My First Cog"""
-    def __init__(self, bot):
-        self.bot = bot
 
     @commands.command()
     async def support(self, ctx):
@@ -47,16 +45,7 @@ class Pensive(commands.Cog):
         if webhook is None:
             webhook = await ctx.channel.create_webhook(name=guild.me.name)
         avatar = member.avatar_url_as(format="png")
-        msg = msg.replace("@everyone", "everyone").replace("@here", "here")
+        msg = await bot.send_filtered(ctx, content='@everyone')
         for mention in ctx.message.mentions:
             msg = msg.replace(mention.mention, mention.display_name)
         await webhook.send(msg, username=member.display_name, avatar_url=avatar)
-
-    @commands.command()
-    async def pingtime(self, ctx):
-        """Ping pong ma guy"""
-        latencies = self.bot.latencies
-        msg = 'Pong Took \n'
-        for pingt in latencies:
-            msg += 'Shard {}/{}: {}ms'.format(shard + 1, len(latencies), round(pingt * 1000))
-        await ctx.send(msg)
