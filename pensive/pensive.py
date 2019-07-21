@@ -15,3 +15,10 @@ class Pensive(commands.Cog):
     async def say(self, ctx, *, msg: str):
         """Make the bot repeat things"""
         await ctx.send(msg)
+
+    @commands.command(hidden=True)
+    async def silentsay(self, ctx, *, msg: str):
+        """Make the bot repeat things silently \n Credit: TrustyJAID"""
+        if ctx.channel.permissions_for(ctx.guild).manage_messages:
+            ctx.message.delete
+        await ctx.send(msg)
