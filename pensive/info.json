@@ -1,0 +1,17 @@
+{
+    "author": [
+        "KoalaBeans"
+    ],
+    "description": "My Personal Cog",
+    "tags": [
+        "personal"
+    ],
+    "hidden": false,
+    "disabled": false,
+    "name": "pensivecowboy",
+    "min_python_version": [
+        3,
+        6,
+        5
+    ]
+}
