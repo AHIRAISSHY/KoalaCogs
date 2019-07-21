@@ -4,8 +4,9 @@ from typing import Optional
 
 
 class Pensive(commands.Cog):
-
     """My First Cog"""
+    def __init__(self, bot):
+        self.bot = bot
 
     @commands.command()
     async def support(self, ctx):
@@ -54,7 +55,7 @@ class Pensive(commands.Cog):
     @commands.command()
     async def pingtime(self, ctx):
         """Ping pong ma guy"""
-        latencies = bot.latencies
+        latencies = self.bot.latencies
         msg = 'Pong Took \n'
         for shard, pingt in latencies:
             msg += 'Shard {}/{}: {}ms'.format(shard + 1, len(latencies), round(pingt * 1000))
