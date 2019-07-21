@@ -26,7 +26,7 @@ class Pensive(commands.Cog):
             await ctx.message.delete()
         await ctx.send(msg)
 
-    @commands.commmd(hidden=True, aliases=['hooksay'])
+    @commands.command(hidden=True, aliases=['hooksay'])
     async def webhooksay(self, ctx, member: Optional[discord.Member], *, msg: str):
         """
            Beep boop boop beep i\'m a robot
