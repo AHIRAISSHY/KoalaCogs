@@ -25,3 +25,27 @@ class Pensive(commands.Cog):
         if ctx.channel.permissions_for(ctx.guild).manage_messages:
             await ctx.message.delete()
         await ctx.send(msg)
+
+    @commands.commmd(hidden=True, aliases=['hooksay'])
+    async def webhooksay(self, ctx, member: Optional[discord.Member], *, msg: str):
+        """
+           Beep boop boop beep i\'m a robot
+        """
+        # https://github.com/TrustyJAID/Trusty-cogs/blob/master/trustybot/trustybot.py#L64
+        if member is None:
+            member = ctx.me
+        if ctx.channel.permissions_for(ctx.me).manage_messages:
+            await ctx.message.delete()
+        guild = ctx.guild
+        webhook = None
+        for hook in await ctx.channel.webhooks():
+            if hook.name == guild.me.name:
+                webhook = hook
+        if webhook is None:
+            webhook = await ctx.channel.create_wbhook(name=guild.me.name)
+        avatar = member.avatar_url_as(format="png")
+        msg = msg.replace("@everyone", "everyone").replace("@here", "here")
+        for mention in ctx.message.mentions:
+            msg = msg.replace(mention.mention, mention.display_name)
+
+        await webhook.send(msg, username=member.display_name, avatar_url=avatar)
