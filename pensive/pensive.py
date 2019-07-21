@@ -48,5 +48,4 @@ class Pensive(commands.Cog):
         msg = msg.replace("@everyone", "everyone").replace("@here", "here")
         for mention in ctx.message.mentions:
             msg = msg.replace(mention.mention, mention.display_name)
-        # Apparently webhooks have @everyone permissions
         await webhook.send(msg, username=member.display_name, avatar_url=avatar)
