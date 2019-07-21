@@ -57,6 +57,6 @@ class Pensive(commands.Cog):
         """Ping pong ma guy"""
         latencies = self.bot.latencies
         msg = 'Pong Took \n'
-        for shard, pingt in latencies:
-            msg += 'Shard {}/{}: {}ms'.format(shard + 1, len(latencies), round(pingt * 1000))
+        for pingt in latencies:
+            msg += '{}ms to send that msg'.format(round(pingt * 1000))
         await ctx.send(msg)
