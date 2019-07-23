@@ -35,5 +35,5 @@ class Pensive(commands.Cog):
 
     @commands.command()
     async def pensivespam(self, ctx):
-        msg =  '<:pensivecowboy:592510037793177619>' * 100
+        msg = '<:pensivecowboy:592510037793177619>' * 100
         await ctx.send(msg)
