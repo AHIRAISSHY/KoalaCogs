@@ -36,21 +36,21 @@ class Pensive(commands.Cog):
     @commands.command()
     async def pensivespam(self, ctx):
         msg = (
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
-            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
+            '<:pensivecowboy:592510037793177619>'
             '<:pensivecowboy:592510037793177619>'
         )
         await ctx.send(msg)
