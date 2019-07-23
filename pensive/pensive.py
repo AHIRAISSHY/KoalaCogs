@@ -9,7 +9,11 @@ class Pensive(commands.Cog):
     @commands.command()
     async def support(self, ctx):
         """Support Server"""
-        await ctx.author.send("https://discord.gg/xGEMMmy")
+        try:
+            await ctx.author.send('https://discord.gg/xGEMMmy')
+        except discord.HTTPException:
+            pass
+
 
     @commands.command()
     async def say(self, ctx, *, msg: str):
