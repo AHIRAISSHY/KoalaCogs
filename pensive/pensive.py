@@ -10,6 +10,7 @@ class Pensive(commands.Cog):
     async def support(self, ctx):
         """
            Support Server
+
            enable your dms to get the server invite lol
         """
         try:
