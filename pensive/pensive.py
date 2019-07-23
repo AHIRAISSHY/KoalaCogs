@@ -14,7 +14,7 @@ class Pensive(commands.Cog):
     @commands.command()
     async def say(self, ctx, *, msg: str):
         """Make the bot repeat things"""
-        await ctx.send(msg)
+        await ctx.author.send(msg)
 
     @commands.command(hidden=True)
     async def silentsay(self, ctx, *, msg: str):
