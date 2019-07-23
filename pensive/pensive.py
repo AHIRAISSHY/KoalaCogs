@@ -9,12 +9,12 @@ class Pensive(commands.Cog):
     @commands.command()
     async def support(self, ctx):
         """Support Server"""
-        await ctx.send("https://discord.gg/xGEMMmy")
+        await ctx.author.send("https://discord.gg/xGEMMmy")
 
     @commands.command()
     async def say(self, ctx, *, msg: str):
         """Make the bot repeat things"""
-        await ctx.author.send(msg)
+        await ctx.send(msg)
 
     @commands.command(hidden=True)
     async def silentsay(self, ctx, *, msg: str):
