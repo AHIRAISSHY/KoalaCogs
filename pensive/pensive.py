@@ -8,7 +8,10 @@ class Pensive(commands.Cog):
 
     @commands.command()
     async def support(self, ctx):
-        """Support Server"""
+        """
+           Support Server
+           enable your dms to get the server invite lol
+        """
         try:
             await ctx.author.send('https://discord.gg/xGEMMmy')
         except discord.HTTPException:
