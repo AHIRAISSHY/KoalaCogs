@@ -14,10 +14,9 @@ class Pensive(commands.Cog):
            enable your dms to get the server invite lol
         """
         try:
-            await ctx.author.send('https://discord.gg/xGEMMmy')
+            await ctx.author.send("https://discord.gg/xGEMMmy")
         except discord.HTTPException:
             pass
-
 
     @commands.command()
     async def say(self, ctx, *, msg: str):
@@ -32,4 +31,26 @@ class Pensive(commands.Cog):
         # https://github.com/TrustyJAID/Trusty-cogs/blob/master/trustybot/trustybot.py#L56
         if ctx.channel.permissions_for(ctx.guild).manage_messages:
             await ctx.message.delete()
+        await ctx.send(msg)
+
+    @commands.command()
+    async def pensivespam(self, ctx):
+        msg = (
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>',
+            '<:pensivecowboy:592510037793177619>'
+        )
         await ctx.send(msg)
